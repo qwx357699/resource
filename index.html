@@ -1,2 +1,70 @@
-https://qwq9527.gitee.io/resource/imgs/
-<img src="./imgs/yu.jpg" alt="域名解析">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>res</title>
+    <style>
+      img {
+        width: 200px;
+        display: block;
+      }
+      .success {
+        position: absolute;
+        color: #4caf50;
+        transition: 1.25s;
+        opacity: 1;
+        inset: 50% 0 auto 0;
+        width: 80px;
+        height: 20px;
+        margin: auto;
+      }
+      .success-leave {
+        opacity: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./imgs/yu.jpg" alt="域名解析" />
+    <span>地址：</span>
+    <div id="txt">https://qwq9527.gitee.io/resource/imgs/</div>
+    <button id="btn">copy</button>
+    <script>
+      btn.onclick = () => {
+        navigator.clipboard.writeText(txt.innerText);
+        showSuccess();
+      };
+      function showSuccess() {
+        let div = document.createElement("div");
+        div.innerText = "复制成功！";
+        div.className = "success";
+        div.style.color = getRadomColor();
+        div.addEventListener(
+          "transitionend",
+          () => {
+            div.remove();
+          },
+          {
+            once: true,
+          }
+        );
+        document.body.append(div);
+        requestAnimationFrame(function () {
+          div.classList.add("success-leave");
+        });
+      }
+      function getRadomColor() {
+        var color = [
+          getRandomNumber(0, 255),
+          getRandomNumber(0, 255),
+          getRandomNumber(0, 255),
+        ];
+        return `rgb(${color.join()})`;
+      }
+      function getRandomNumber(start, end) {
+        return Math.floor(Math.random() * (end - start) + start);
+      }
+    </script>
+  </body>
+</html>
