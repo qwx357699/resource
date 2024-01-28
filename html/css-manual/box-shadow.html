@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-family: 'Roboto Mono', 'consolas', sans-serif;
+      }
+    </style>
+    <style>
+      .container {
+        display: grid;
+        width: 700px;
+        margin: 3em auto;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        font-size: 12px;
+        gap: 80px 40px;
+      }
+      .item {
+        color: #666;
+        border: 2px solid #000;
+        height: 140px;
+        background: #eee;
+      }
+      .code {
+        color: #f40;
+      }
+      .box {
+      }
+      strong {
+        color: #f40;
+      }
+      .box1 {
+        box-shadow: 8px 15px teal;
+      }
+      .box2 {
+        box-shadow: -8px -15px rgba(0, 0, 0, 0.5);
+      }
+      .box3 {
+        box-shadow: 8px 15px 5px teal;
+      }
+      .box4 {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+      .box5 {
+        box-shadow: 0 0 0 10px teal;
+      }
+      .box6 {
+        box-shadow: inset 0 0 3px 8px teal;
+      }
+      .box7 {
+        box-shadow: 0 0 0 8px lightgreen, 0 0 0 16px teal;
+      }
+      .box8 {
+        box-shadow: inset 0 0 0 8px lightgreen, inset 0 0 0 16px teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item box1">
+        <p class="code">box-shadow: 8px 15px teal</p>
+        <p class="desc">
+          阴影水平偏移
+          <strong>8px</strong>
+          ，垂直偏移
+          <strong>15px</strong>
+          ，
+          <br />
+          阴影颜色为
+          <strong style="color: teal">teal</strong>
+        </p>
+      </div>
+      <div class="item box2">
+        <p class="code">box-shadow: -8px -15px rgba(0, 0, 0, 0.5)</p>
+        <p class="desc">
+          阴影水平偏移
+          <strong>-8px</strong>
+          ，垂直偏移
+          <strong>-15px</strong>
+          ，
+          <br />
+          阴影颜色为
+          <strong style="color: rgba(0, 0, 0, 0.5)">透明度为0.5的黑色</strong>
+        </p>
+      </div>
+      <div class="item box3">
+        <p class="code">box-shadow: 8px 15px 5px teal</p>
+        <p class="desc">
+          阴影水平偏移
+          <strong>8px</strong>
+          ，垂直偏移
+          <strong>15px</strong>
+          ，
+          <br />
+          阴影的模糊半径为
+          <strong>5px</strong>
+          ，该值越大，模糊的范围就越大
+          <br />
+          阴影颜色为
+          <strong style="color: teal">teal</strong>
+        </p>
+      </div>
+      <div class="item box4">
+        <p class="code">box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)</p>
+        <p class="desc">
+          阴影水平偏移
+          <strong>0</strong>
+          ，垂直偏移
+          <strong>0</strong>
+          ，
+          <br />
+          阴影的模糊半径为
+          <strong>10px</strong>
+          ，该值越大，模糊的范围就越大
+          <br />
+          阴影颜色为
+          <strong style="color: rgba(0, 0, 0, 0.5)">透明度为0.5的黑色</strong>
+        </p>
+      </div>
+      <div class="item box5">
+        <p class="code">box-shadow: 0 0 0 10px teal</p>
+        <p class="desc">
+          阴影水平偏移
+          <strong>0</strong>
+          ，垂直偏移
+          <strong>0</strong>
+          ，
+          <br />
+          阴影的模糊半径为
+          <strong>0</strong>
+          ，该值越大，模糊的范围就越大
+          <br />
+          阴影扩散
+          <strong>10px</strong>
+          <br />
+          阴影颜色为
+          <strong style="color: teal">teal</strong>
+        </p>
+      </div>
+      <div class="item box6">
+        <p class="code">box-shadow: inset 0 0 3px 8px teal</p>
+        <p class="desc">
+          阴影
+          <strong>向内</strong>
+          扩散
+          <br />
+          阴影水平偏移
+          <strong>0</strong>
+          ，垂直偏移
+          <strong>0</strong>
+          ，
+          <br />
+          阴影的模糊半径为
+          <strong>3px</strong>
+          ，该值越大，模糊的范围就越大
+          <br />
+          阴影扩散
+          <strong>8px</strong>
+          <br />
+          阴影颜色为
+          <strong style="color: teal">teal</strong>
+        </p>
+      </div>
+      <div class="item box7">
+        <p class="code">
+          box-shadow: 0 0 0 8px lightgreen,
+          <br />
+          0 0 0 16px teal
+        </p>
+        <p class="desc">多个阴影，前者覆盖后者</p>
+      </div>
+      <div class="item box8">
+        <p class="code">
+          box-shadow: inset 0 0 0 8px lightgreen,
+          <br />
+          inset 0 0 0 16px teal
+        </p>
+        <p class="desc">多个阴影，前者覆盖后者</p>
+      </div>
+    </div>
+  </body>
+</html>

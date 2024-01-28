@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://mdrs.yuanjin.tech/html/css-manual/border-raduis.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      html {
+        font-family: 'Roboto Mono', 'consolas', sans-serif;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .box1 {
+        width: 200px;
+        height: 100px;
+        background: lightblue;
+        border: 2px solid;
+        line-height: 100px;
+        text-align: center;
+        margin: 1em;
+      }
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background: lightblue;
+        border: 2px solid;
+        line-height: 200px;
+        text-align: center;
+        margin: 1em;
+      }
+      [contenteditable] {
+        display: block;
+        width: 400px;
+        margin: 1em auto;
+        line-height: 1.5;
+        padding: 15px;
+        background: #ccc;
+        border-radius: 5px;
+        border: 2px solid #2261c5;
+        white-space: pre;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <style contenteditable="">
+.box1 {
+  border-radius: 30px;
+}
+.box2{
+  border-radius: 50%;
+}
+    </style>
+    <pre></pre>
+    <div class="container">
+      <div class="box1">box1</div>
+      <div class="box2">box2</div>
+    </div>
+  
+
+</body></html>

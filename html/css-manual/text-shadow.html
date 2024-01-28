@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        font-family: 'Roboto Mono', 'consolas', sans-serif;
+      }
+    </style>
+    <style>
+      .container {
+        display: grid;
+        width: 700px;
+        margin: 3em auto;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        font-size: 16px;
+        gap: 80px 40px;
+      }
+      .item {
+        color: #666;
+        border: 2px solid #000;
+        height: 140px;
+        background: #eee;
+      }
+      .code {
+        color: #f40;
+        font-size: 12px;
+      }
+      strong {
+        color: #f40;
+      }
+      .box1 {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+      }
+      .box2 {
+        text-shadow: 2px 2px 3px;
+      }
+      .box3 {
+        text-shadow: -1px -1px #fff, -1px 0px #fff, -1px 1px #fff, 0px -1px #fff,
+          0px 1px #fff, 1px -1px #fff, 1px 0px #fff, 1px 1px #fff;
+        grid-column: 1/3;
+        line-height: 1.5em;
+        background: #333;
+      }
+      .box3 .code {
+        font-size: 1em;
+        margin: 0;
+      }
+      .box3 .desc {
+        font-size: 3em;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item box1">
+        <p class="code">text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5)</p>
+        <p class="desc">
+          阴影水平偏移
+          <strong>2px</strong>
+          ，垂直偏移
+          <strong>2px</strong>
+          ，
+          <br />
+          模糊半径为
+          <strong>3px</strong>
+          <br />
+          阴影颜色为
+          <strong style="color: rgba(0, 0, 0, 0.5)">半透明的黑色</strong>
+        </p>
+      </div>
+      <div class="item box2">
+        <p class="code">text-shadow: 2px 2px 3px</p>
+        <p class="desc">
+          阴影水平偏移
+          <strong>2px</strong>
+          ，垂直偏移
+          <strong>2px</strong>
+          ，
+          <br />
+          模糊半径为
+          <strong>3px</strong>
+          <br />
+          阴影颜色为
+          <strong>文字颜色</strong>
+        </p>
+      </div>
+      <div class="item box3">
+        <p class="code">
+          text-shadow: -1px -1px #fff, -1px 0px #fff, -1px 1px #fff, 0px -1px
+          #fff, 0px 1px #fff, 1px -1px #fff, 1px 0px #fff, 1px 1px #fff
+        </p>
+        <p class="desc">多个阴影，给文字加上边框</p>
+      </div>
+    </div>
+  </body>
+</html>
